@@ -5,24 +5,25 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class RegistroCentroEsportivoTestes extends Core {
+public class CadastrarCentroEsportivoTestes extends Core {
 
     @BeforeEach
-    void openBrowser(){
+    void openBrowser() {
         abrirChrome("https://social-sport-lessor.web.app/auth");
     }
 
     @Test
-    void validarRegistro() throws InterruptedException {
+    void validarCadastro() throws InterruptedException {
 
         registroCentroEsportivoPage.clicarBotao();
+        cadastrarCentroEsportivoPage.PreencherCadastro();
 
     }
+
     @AfterEach
-    void quitBrowser(){
+    void quitBrowser() {
         driver.quit();
 
 
     }
-
 }
