@@ -2,6 +2,9 @@ package com.example.socialsports.pages;
 
 import com.example.socialsports.core.Core;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 
 public class CadastrarCentroEsportivoPage extends Core {
 
@@ -23,17 +26,17 @@ public class CadastrarCentroEsportivoPage extends Core {
 
     public By btnProximoTela2 = By.xpath("//ion-button[text()='Próximo (2/5)']");
 
-    public By inputCEP = By.xpath("//input[@id='ion-input-25']");
+    public By inputCEP = By.xpath("//*[@id='ion-input-9']");
 
-    public By inputRua = By.xpath("//input[@id='ion-input-26']");
-    public By inputNumero = By.xpath("//input[@id='ion-input-27']");
+    public By inputRua = By.xpath("//*[@id='ion-input-10']");
+    public By inputNumero = By.xpath("//*[@id='ion-input-11']");
 
     public By inputComplemento = By.xpath("//input[@id='ion-input-12']");
 
 
     //public By inputBairro = By.xpath("//input[@id='ion-input-13']");
 
-    public By btnProximoTela3 = By.xpath("/span[text()='Próximo (3/5)']");
+    public By btnProximoTela3 = By.xpath("//span[text()='Próximo (3/5)']");
 
     public By inputUserName = By.xpath("//input[@id='ion-input-15']");
 
@@ -69,8 +72,11 @@ public class CadastrarCentroEsportivoPage extends Core {
       Thread.sleep(2000);
       clicar(btnProximoTela3);
       preencher(inputUserName,"Futel123");
-      Thread.sleep(2000);
+      Thread.sleep(5000);
       clicar(btnProximoTela4);
+      Thread.sleep(5000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,3000)", "");
       clicar(btnRegistro);
 
     }
