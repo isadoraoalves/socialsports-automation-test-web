@@ -1,7 +1,6 @@
 package com.example.socialsports.core;
 
-import com.example.socialsports.pages.CadastrarCentroEsportivoPage;
-import com.example.socialsports.pages.RegistroCentroEsportivoPage;
+import com.example.socialsports.pages.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,6 +20,14 @@ public class Core {
     public static RegistroCentroEsportivoPage registroCentroEsportivoPage = new RegistroCentroEsportivoPage();
 
     public static CadastrarCentroEsportivoPage cadastrarCentroEsportivoPage = new CadastrarCentroEsportivoPage();
+
+    public static LoginCentroEsportivoPage loginCentroEsportivoPage = new LoginCentroEsportivoPage();
+
+    public static CadastarHorarioFuncionamentoPage cadastarHorarioFuncionamentoPage = new CadastarHorarioFuncionamentoPage();
+
+    public static CadastrarFuncionarioCentroEsportivoPage cadastrarFuncionarioCentroEsportivoPage = new CadastrarFuncionarioCentroEsportivoPage();
+
+
 
     public static void abrirChrome(String url) {
         WebDriverManager.chromedriver().setup();

@@ -36,7 +36,7 @@ public class CadastrarCentroEsportivoPage extends Core {
 
     //public By inputBairro = By.xpath("//input[@id='ion-input-13']");
 
-    public By btnProximoTela3 = By.xpath("//span[text()='Próximo (3/5)']");
+    public By btnProximoTela3 = By.xpath("//font[text()='Próximo (3/5)']");
 
     public By inputUserName = By.xpath("//input[@id='ion-input-15']");
 
@@ -70,6 +70,7 @@ public class CadastrarCentroEsportivoPage extends Core {
       //scroll(inputBairro);
       //preencher(inputBairro, "Tibery");
       Thread.sleep(2000);
+      scroll(btnProximoTela3);
       clicar(btnProximoTela3);
       preencher(inputUserName,"Futel123");
       Thread.sleep(5000);
